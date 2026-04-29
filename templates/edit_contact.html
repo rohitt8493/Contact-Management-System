@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Edit Contact</h2>
+  <form method="post" class="form">
+    <label>Name<br><input type="text" name="name" value="{{ contact.name }}" required></label>
+    <label>Phone<br><input type="text" name="phone" value="{{ contact.phone }}" required></label>
+    <label>Email<br><input type="email" name="email" value="{{ contact.email }}" required></label>
+    <div class="form-actions">
+      <button type="submit">Save</button>
+      <a class="button-link" href="{{ url_for('index') }}">Cancel</a>
+    </div>
+  </form>
+  <form method="post" action="{{ url_for('delete_contact', contact_id=contact.id) }}" onsubmit="return confirm('Delete this contact?');" style="margin-top:12px;">
+    <button type="submit" class="danger">Delete Contact</button>
+  </form>
+{% endblock %}

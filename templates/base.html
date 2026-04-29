@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Management System - Test</title>
+  <style>
+    body{font-family:system-ui,Arial,sans-serif;margin:0;background:#f3f4f6;color:#111}
+    .container{max-width:900px;margin:24px auto;padding:0 16px}
+    header{background:#2563eb;color:#fff;padding:12px 0}
+    header .container{display:flex;justify-content:space-between;align-items:center}
+    a{color:inherit;text-decoration:none}
+    .card{background:#fff;padding:16px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.06)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 style="margin:0;font-size:1.1rem"><a href="{{ url_for('index') }}">Contact Management System</a></h1>
+      <nav>
+        <a href="{{ url_for('add_contact') }}" style="font-size:.95rem">Add Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="margin-top:18px">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer style="text-align:center;padding:18px 0;color:#6b7280">
+    <div class="container">
+      <small>© {{ now.year }} Contact Management System</small>
+    </div>
+  </footer>
+</body>
+</html>

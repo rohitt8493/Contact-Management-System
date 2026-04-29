@@ -1,0 +1,40 @@
+:root{
+  --bg:#f7f7f8;
+  --card:#fff;
+  --accent:#2b6cb0;
+  --muted:#6b7280;
+  --maxw:900px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font-family:system-ui,Segoe UI,Roboto,Arial;color:#111;min-height:100vh;display:flex;flex-direction:column}
+.container{width:92%;max-width:var(--maxw);margin:18px auto}
+.site-header{background:linear-gradient(90deg,var(--accent),#4c9bd6);color:#fff;padding:14px 0}
+.site-header .container{display:flex;justify-content:space-between;align-items:center}
+.site-header a{color:#fff;text-decoration:none;margin-left:12px}
+nav a{margin-left:12px}
+.site-footer{margin-top:auto;text-align:center;padding:12px 0;color:var(--muted);font-size:.9rem}
+.flash-list{margin:12px 0}
+.flash{padding:8px 12px;border-radius:6px;margin-bottom:8px}
+.flash.success{background:#e6fffa;color:#065f46}
+.flash.error{background:#ffe6e6;color:#7a1f1f}
+.flash.warning{background:#fff7e6;color:#7a4f00}
+.toolbar{margin:12px 0;display:flex;justify-content:space-between;align-items:center}
+.search-form input[type="text"]{padding:8px;border-radius:6px;border:1px solid #ddd;width:260px}
+.search-form button{padding:8px 10px;margin-left:8px;border-radius:6px;border:0;background:var(--accent);color:#fff}
+.search-form .clear{margin-left:8px;color:var(--muted);text-decoration:none}
+.contacts-table{width:100%;border-collapse:collapse;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.06)}
+.contacts-table th, .contacts-table td{padding:12px;border-bottom:1px solid #f1f1f1;text-align:left}
+.contacts-table th{background:#fafafa;color:var(--muted);font-weight:600}
+.actions a{margin-right:8px;color:var(--accent);text-decoration:none}
+.link-button{background:none;border:0;color:var(--accent);cursor:pointer;padding:0}
+.form{background:var(--card);padding:16px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.06)}
+.form label{display:block;margin-bottom:10px}
+.form input, .form textarea{width:100%;padding:8px;border:1px solid #ddd;border-radius:6px}
+.form-actions{margin-top:12px}
+.form-actions button{background:var(--accent);color:#fff;padding:8px 12px;border-radius:6px;border:0}
+.button-link{display:inline-block;padding:8px 12px;background:#eee;border-radius:6px;color:#333;text-decoration:none;margin-left:8px}
+.danger{background:#d9534f;color:#fff;padding:8px 12px;border-radius:6px;border:0}
+@media (max-width:600px){
+  .site-header .container{flex-direction:column;gap:8px}
+  .search-form input[type="text"]{width:100%}
+}
